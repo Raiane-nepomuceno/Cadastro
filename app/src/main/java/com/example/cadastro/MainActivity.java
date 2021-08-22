@@ -64,8 +64,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else
         {
-            if(view.getId() == R.id.btnSalvar)
-            {
                 Cadastro cadastro = null;
                 cadastro.setNomeCompleto(nomeEt.getText().toString());
                 cadastro.setCidade(cidadeEt.getText().toString());
@@ -88,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String str = "Olá, "+cadastro.getNomeCompleto()+"! VoCê está cadastrado conosco! :)" ;
                 Toast.makeText(this, str,Toast.LENGTH_SHORT).show();
                 System.out.println(cadastro.toString());
-        }
+
 }
     }
 }
