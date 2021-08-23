@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 String str = "Olá, "+cadastro.getNomeCompleto()+"! Você está cadastrado conosco! :)" ;
                 Toast.makeText(this, str,Toast.LENGTH_SHORT).show();
-                //Log.v("Cadastro", "mensagem que vc gostaria de ver");
-}
+x}
     }
 }
