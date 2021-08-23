@@ -3,6 +3,7 @@ package com.example.cadastro;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
     @Override
     public void onClick(View view) {
         if(view.getId() == R.id.btnLimpar)
@@ -64,7 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else
         {
-                Cadastro cadastro = null;
+
+                Cadastro cadastro = new Cadastro();
                 cadastro.setNomeCompleto(nomeEt.getText().toString());
                 cadastro.setCidade(cidadeEt.getText().toString());
                 cadastro.setEmail(emailEt.getText().toString());
@@ -83,10 +86,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else {
                     cadastro.setInteresseEmail(false);
                 }
-                String str = "Olá, "+cadastro.getNomeCompleto()+"! VoCê está cadastrado conosco! :)" ;
+                String str = "Olá, "+cadastro.getNomeCompleto()+"! Você está cadastrado conosco! :)" ;
                 Toast.makeText(this, str,Toast.LENGTH_SHORT).show();
-                System.out.println(cadastro.toString());
-
+                //Log.v("Cadastro", "mensagem que vc gostaria de ver");
 }
     }
 }
